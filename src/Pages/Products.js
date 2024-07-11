@@ -73,21 +73,7 @@ const Products = () => {
                                 <button className='bg-green-500 text-white font-semibold px-4 py-1  rounded ' onClick={() => { setAc('Daikin') }}>Daikin</button>
                             </div>
 
-                            {show ? (<>
-                                <button disabled
-                                    onClick={() => { handleShowMore() }}
-                                    className="inline-block rounded-lg border bg-white px-4 py-2 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base"
-                                >
-                                    Less
-                                </button>
-                            </>) : (
-                                <button disabled
-                                    onClick={() => { handleShowMore() }}
-                                    className="inline-block rounded-lg border bg-white px-4 py-2 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base"
-                                >
-                                    Show more
-                                </button>
-                            )}
+                           
                         </div>
                         <div className="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
                             {/* product - start */}
