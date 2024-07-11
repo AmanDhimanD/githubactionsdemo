@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { Link, useNavigate } from 'react-router-dom';
 import Starts from '../components/Starts';
@@ -6,10 +6,10 @@ import Loader from '../components/Loader'
 
 const Products = () => {
     const navigate = useNavigate();
-    const [show, setShow] = React.useState(false);
-    const [data, setData] = React.useState([]);
-    const [fetchTime, setFetchTime] = React.useState(false);
-    const [ac, setAc] = React.useState('');
+    const [show, setShow] = useState(false);
+    const [data, setData] = useState([]);
+    const [fetchTime, setFetchTime] = useState(false);
+    const [ac, setAc] = useState('');
 
     const handleShowMore = () => {
         const showDiv = document.getElementById("showMore");
