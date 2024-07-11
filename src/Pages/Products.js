@@ -6,21 +6,11 @@ import Loader from '../components/Loader'
 
 const Products = () => {
     const navigate = useNavigate();
-    const [show, setShow] = useState(false);
     const [data, setData] = useState([]);
     const [fetchTime, setFetchTime] = useState(false);
     const [ac, setAc] = useState('');
 
-    const handleShowMore = () => {
-        const showDiv = document.getElementById("showMore");
-
-        setShow(!show);
-        !show
-            ?
-            showDiv.className = "grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4 " :
-            showDiv.className = "grid gap-x-4 gap-y-6 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4 hidden"
-    }
-
+ 
     const fetchdata = async () => {
         setFetchTime(true);
         const api = 'https://ecosustain-backend.onrender.com/ac-details';
@@ -183,105 +173,7 @@ const Products = () => {
                         {fetchTime && <p className='text-center text-3xl font-bold '>Loading... <Loader /></p>}
                         <br />
 
-                        <div className=" hidden " id="showMore" >
-                            {/* product - start */}
-                            <div>
-                                <Link
-                                    href="#"
-                                    className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
-                                >
-                                    <img
-                                        src="https://images.unsplash.com/photo-1590756254933-2873d72a83b6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                        loading="lazy"
-                                        alt="Photo by Austin Wade"
-                                        className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                                    />
-                                </Link>
-                                <div className="flex flex-col">
-                                    <span className="text-gray-500">AC</span>
-                                    <Link
-                                        href="#"
-                                        className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-                                    >
-                                        LG
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* product - end */}
-                            {/* product - start */}
-                            <div>
-                                <Link
-                                    href="#"
-                                    className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
-                                >
-                                    <img
-                                        src="https://images.unsplash.com/photo-1566917064245-1c6bff30dbf1?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                        loading="lazy"
-                                        alt="Photo by engin akyurt"
-                                        className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                                    />
-                                </Link>
-                                <div className="flex flex-col">
-                                    <span className="text-gray-500">AC</span>
-                                    <Link
-                                        href="#"
-                                        className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-                                    >
-                                        LG
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* product - end */}
-                            {/* product - start */}
-                            <div>
-                                <Link
-                                    href="#"
-                                    className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
-                                >
-                                    <img
-                                        src="https://plus.unsplash.com/premium_photo-1715620329655-b61bec83764c?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                        loading="lazy"
-                                        alt="Photo by Austin Wade"
-                                        className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                                    />
-                                </Link>
-                                <div className="flex flex-col">
-                                    <span className="text-gray-500">AC</span>
-                                    <Link
-                                        href="#"
-                                        className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-                                    >
-                                        Daikin
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* product - end */}
-                            {/* product - start */}
-                            <div>
-                                <Link
-                                    href="#"
-                                    className="group mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
-                                >
-                                    <img
-                                        src="https://images.unsplash.com/photo-1617861648989-76a572012089?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                        loading="lazy"
-                                        alt="Photo by Austin Wade"
-                                        className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                                    />
-                                </Link>
-                                <div className="flex flex-col">
-                                    <span className="text-gray-500">AC</span>
-                                    <Link
-                                        href="#"
-                                        className="text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl"
-                                    >
-                                        Daikin
-                                    </Link>
-                                </div>
-                            </div>
-                            {/* product - end */}
-                        </div>
-
+                     
                     </div>
                 </div >
 
